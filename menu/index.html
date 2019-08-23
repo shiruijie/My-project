@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>菜谱分享</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="./js/ajax.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/Date.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
+</head>
+<body>
+    <div class="content clear">
+        <ul id="main">
+<!--            <li class="clear">-->
+<!--                <div class="left">-->
+<!--                    <img src="./大星.jpeg" alt="">-->
+<!--                </div>-->
+<!--                <div class="right">-->
+<!--                    <p>1.新鲜鲈鱼，去鳞去内脏清洗干净，沥干水分在鱼的正反面，分别切花刀，有助入味。</p>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <li class="clear">-->
+<!--                <div class="left">-->
+<!--                    <img src="./大星.jpeg" alt="">-->
+<!--                </div>-->
+<!--                <div class="right">-->
+<!--                    <p>1.新鲜鲈鱼，去鳞去内脏清洗干净，沥干水分在鱼的正反面，分别切花刀，有助入味。</p>-->
+<!--                </div>-->
+<!--            </li>-->
+        </ul>
+    </div>
+</body>
+<script>
+    $(function () {
+        var obj = {};
+        var href = window.location.href;
+        function getParams(sHref) {
+            var args = sHref.split('?');
+            if(args[0] == sHref){
+                return ""
+            }
+            var arr = args[1].split('&');
+            for(var i = 0; i <arr.length;i++){
+                var arg = arr[i].split('=');
+                obj[arg[0]] = arg[1];
+            }
+            return obj;
+        }
+        getParams(href);
+        var str = 'timestamp:'+ new Date().Format('yyyy-MM-ddhh:mm:ss')+',deviceCode:'+ obj.deviceCode +',ver:'+ obj.ver +',unilife';
+        var sign = md5(str);
+        function getMessage(){
+            $.ajax({
+                type:'POST',
+                url:'http://fridge.unilifemedia.com:8100/service/daydaycook/getRecipeDetail',
+                data:{
+                    requestData:JSON.stringify({
+                        "data":{
+                            "recipeId":obj.recipeId
+                        },
+                        "header":{
+                            "deviceCode":obj.deviceCode,
+                            "sign":sign,
+                            "timestamp":new Date().Format('yyyy-MM-ddhh:mm:ss'),
+                            "ver":obj.ver,
+                        },
+                        "offset":obj.offset,
+                        "pageSize":obj.pageSize
+                    })
+                },
+                success:function (res) {
+                    var html = [];
+                    var data = res.data.recipeDetail.steps;
+                    for(var i = 0; i < data.length; i++){
+                        html.push('<li class="clear">')
+                        html.push('<div class="left">')
+                        html.push('<img src="'+ data[i].imageUrl +'">')
+                        html.push('</div>')
+                        html.push('<div class="right">')
+                        html.push('<p>'+ data[i].stepNo + '.'+data[i].content +'<p/>')
+                        html.push('</div>')
+                        html.push('</li>')
+                    }
+                    $("#main").html(html.join(""))
+                },
+                error:function (err) {
+                    console.log(err)
+                }
+            })
+        }
+        getMessage()
+    })
+</script>
+</html>

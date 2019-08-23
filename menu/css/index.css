@@ -1,0 +1,42 @@
+.content{
+    width: 100%;
+    background-color: #f5f5f5;
+}
+.content ul{
+    padding: 0.26rem 0.48rem;
+    width:88.8%;
+    margin:0.26rem auto 0 auto;
+}
+.content ul li{
+    margin-bottom: 0.278rem;
+    height:2.4rem;
+}
+.content ul li:last-child{
+    margin-bottom: 0;
+}
+.content ul li .left{
+    float: left;
+    margin-right: 0.69rem;
+    width:2.86rem;
+    height:2.4rem;
+}
+.content ul li .left img{
+    width:100%;
+    height:100%;
+}
+.content ul li .right{
+    float: left;
+    height: 100%;
+    position: relative;
+}
+.content ul li .right p{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(7%,-50%);
+    font-size:0.3rem;
+    line-height: 0.38rem;
+    color:#313131;
+    text-align: left;
+    width: 4.6rem;
+}

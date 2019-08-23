@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,td{margin:0;padding:0;}
+html{font-size: 16px}
+body{word-wrap:break-word;}
+body,html{width: 100%;height:100%;}
+a,u,s,del{color:#666;text-decoration:none}
+fieldset ,a img,.bor0 {border:0;}
+i,em,b{font-style:normal;font-weight:100;}
+li{list-style:none;}
+img{vertical-align:middle;}
+table{border-collapse:collapse;}
+input,textarea{outline:none;}/*去除google表单点击虚框*/
+textarea{resize:none;}/*禁止拖动*/
+
+.ind2{text-indent:2em;}
+.valign{text-align:center;}
+.valign img{vertical-align:middle;}
+.valign:after{content:"";display:inline-block;vertical-align:middle;height:100%;}
+
+/* 单行文本自动出现省略号 */
+.over{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+
+/* 解决高度塌陷和margin-top向上传递 */
+.clear{zoom:1;}/* 解决IE的高度塌陷问题 */
+.clear:before{content:"";display:table;}/*解决传递*/
+.clear:after{content:"";clear:both;display:block;}/*解决塌陷*/
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+not supported by any browser */
+}

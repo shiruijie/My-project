@@ -1,0 +1,75 @@
+.content{
+    width: 100%;
+    min-height:100%;
+    background-color: #efefef;
+    padding: 0 0.66rem;
+    box-sizing: border-box;
+}
+.content .content-t{
+    padding-top: 1.05rem;
+    height:1.07rem;
+}
+.content .content-t i{
+    font-size:15px;
+}
+.content .content-t span{
+    font-size:0.24rem;
+    line-height:1.07rem;
+}
+.content .content-c{
+    display: flex;
+    justify-content: space-between;
+}
+.content .content-c .left img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 5px;
+}
+.content .content-c .right{
+
+}
+.content .content-c .right h1{
+    font-size:0.213rem;
+    margin-bottom: 0.33rem;
+}
+.content .content-c .right p{
+    width: 4.75rem;
+    font-size:0.213rem;
+    line-height: 0.4rem;
+}
+.content .content-c .right .play{
+    margin-top:0.2rem;
+    line-height: 0.6rem;
+}
+.content .content-c .right .play i{
+    font-size:20px;
+}
+.content .content-c .right .play span{
+    font-size:0.24rem;
+}
+.content .content-b{
+    padding-bottom: 1rem;
+}
+.content .content-b ul{
+    margin-top:0.417rem;
+}
+.content .content-b ul li{
+    overflow: hidden;
+    border-top: 1px solid #cbcbcb;
+    line-height: 0.94rem;
+    font-size:0.213rem;
+}
+.content .content-b ul li:last-child{
+    border-bottom: 1px solid #cbcbcb;
+}
+.content .content-b ul li .left{
+    float: left;
+    margin-left:0.45rem;
+}
+.content .content-b ul li .left b{
+    margin-right:0.2rem;
+}
+.content .content-b ul li .right{
+    float: right;
+    margin-right:0.45rem;
+}

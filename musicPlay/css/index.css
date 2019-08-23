@@ -1,0 +1,151 @@
+.content{
+    width: 100%;
+    height:100%;
+    background-color: #efefef;
+}
+.content .content-t{
+    background-color: #efefef;
+    height:2.47rem;
+    padding-top: 1.4rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.content .content-t .arrow{
+    width: 0.14rem;
+    height:0.23rem;
+    position: absolute;
+    left:0.65rem;
+    top:1.5rem;
+}
+.content .content-t .title{
+    text-align: center;
+}
+.content .content-t .title h1{
+    font-size:0.26rem;
+    line-height: 0.46rem;
+    color:#000;
+}
+.content .content-t .title h2{
+    font-size:0.22rem;
+    line-height:0.39rem;
+    color:#606060;
+}
+.content .content-c{
+    height: 9rem;
+    background-color: #efefef;
+    position: relative;
+}
+.content .content-c .pointer{
+    position: absolute;
+    top:0;
+    left:50%;
+    z-index: 10;
+    transform-origin: 0 0;
+}
+.content .content-c .pointer img{
+    height:1.58rem;
+}
+.content .content-c .cd{
+    position: absolute;
+    top:0.35rem;
+    left:34%;
+    height:3.75rem;
+    width:3.75rem;
+    background: url("../images/guangpan.png") no-repeat center;
+    background-size: cover;
+    transform-origin: 1.675rem 1.875rem;
+}
+.content .content-c .star{
+    position: absolute;
+    top:1.15rem;
+    left:40.2%;
+    transform-origin: 1.055rem 1.075rem;
+}
+.content .content-c .star img{
+    width: 2.13rem;
+    height:2.13rem;
+    border-radius: 50%;
+}
+.content .content-c .lyric{
+    position: absolute;
+    top:6.5rem;
+    left:4.5rem;
+}
+.xuanzhuan{
+    animation: rotate-disk 5s infinite 0.5s linear;
+    /*transform-origin: 0.712rem 1.5rem;*/
+    animation-play-state: paused;
+}
+.taiqi{
+    animation: rotate-needle-pause 0.5s 1 normal linear;
+    animation-fill-mode: forwards;
+}
+.luoxia{
+    animation: rotate-needle-resume 0.5s 1 normal linear;
+    animation-fill-mode: forwards;
+}
+@keyframes rotate-disk {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes rotate-needle-pause {
+    100% {
+        transform: rotateZ(-20deg);
+    }
+}
+
+@keyframes rotate-needle-resume {
+    0% {
+        transform: rotateZ(-20deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+.content .content-b{
+
+}
+.content .content-b .progress{
+    width: 8.4rem;
+    /*margin:0 auto;*/
+    margin-left: 1.4rem;
+}
+.content .content-b .progress span{
+    display: inline-block;
+    font-size: 0.15rem;
+}
+.content .content-b .progress .progress-bar{
+    display: inline-block;
+    width: 6.2rem;
+    height:0.07rem;
+    border-radius: 0.03rem;
+    background-color: #e3e3e3;
+    margin:0.03rem 0.18rem;
+    position: relative;
+}
+.content .content-b .progress .progress-bar .rdy{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 0;
+    height:0.07rem;
+    border-radius: 0.03rem;
+    background-color: #1b1b1b;
+}
+.content .content-b .operate{
+    width: 2.6rem;
+    margin:0.55rem auto;
+    display: flex;
+    justify-content: space-around;
+}
+.content .content-b .operate p{}
+.content .content-b .operate p i{
+    display: block;
+    font-size: 25px;
+}
+.content .content-b .operate p#start i{
+    font-size: 35px;
+    margin-top:-5px;
+}

@@ -1,0 +1,198 @@
+html{
+    font-size:108px
+}
+body{
+    background-color: #f5f5f5;
+}
+.swiper-container{
+    width:100%;
+    height:100%;
+}
+.swiper-slide{
+    width: 100%;
+    height:100%;
+    padding: 0 0.38rem 0.74rem 0.38rem;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+.swiper-slide.home{
+    background-color: #f5f5f5;
+    padding: 0;
+    height:100%;
+    position: relative;
+}
+.swiper-slide.home .content{
+    text-align: center;
+    /*margin-top:55%;*/
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-100%);
+}
+.swiper-slide.home .content img{
+    width: 2.009rem;
+    height: 2.009rem;
+    text-align: center;
+}
+.swiper-slide.home .content h1{
+    font-size:0.574rem;
+    margin-top:0.639rem;
+    color:#b6b6b6;
+}
+.swiper-slide.home .footer{
+    text-align: center;
+    /*margin-top:70%;*/
+    width: 100%;
+    position: absolute;
+    bottom:10%;
+}
+.swiper-slide.home .footer span{
+    font-size:0.353rem;
+    color:#b6b6b6;
+    margin:0 auto;
+}
+.swiper-slide.list{
+    background-color: #f5f5f5;
+    padding: 0;
+    overflow: hidden;
+    height:100%;
+}
+.swiper-slide.list h1{
+    height:0.6rem;
+    line-height: 0.6rem;
+    font-size:0.4rem;
+    width:1.91rem;
+    background-color: #ff0000;
+    color:#fff;
+    border-radius:0.25rem;
+    margin-top:0.537rem;
+    margin-bottom:0.167rem;
+    text-indent: 0.62rem;
+    margin-left:-0.2rem;
+}
+.swiper-slide.list .listPage{
+    height:90%;
+    padding: 0.4rem 2.4rem 0.36rem 2rem;
+    box-sizing: border-box;
+}
+.listPage ul.one{
+    height:100%;
+}
+.listPage ul.one >li{
+    color:#898888;
+    margin-bottom:0.16rem;
+}
+.listPage ul.one li div{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.listPage ul.one li a{
+    font-size:0.35rem;
+    line-height: 0.435rem;
+}
+
+.listPage ul.one li  ul.two{
+    padding-left: 0.56rem;
+    height: 100%;
+}
+.listPage ul.one li  ul.two li{
+    color:#898888;
+    margin-top:0.2rem;
+}
+.listPage ul.one li  ul.two li div{
+    display: flex;
+    justify-content: space-between;
+}
+.listPage ul.one li  ul.two li span{
+    font-size:0.36rem;
+    line-height: 0.548rem;
+}
+.listPage ul.one li  ul.two li a{
+    font-size:0.36rem;
+    line-height: 0.548rem;
+    color:#898888;
+}
+.listPage ul.one li  ul.two li ul.three{
+    padding-left: 0.806rem;
+}
+.listPage ul.one li  ul.two li ul.three li{
+}
+.listPage ul.one li  ul.two li ul.three li div{
+    display: flex;
+    justify-content: space-between;
+}
+.listPage ul.one li  ul.two li ul.three li span{
+    font-size:0.35rem;
+    line-height: 0.352rem;
+    color:#c3c3c3;
+}
+.swiper-slide .title{
+    display: flex;
+    justify-content: space-between;
+    height:1rem;
+}
+.swiper-slide .title span{
+    font-size:0.324rem;
+    line-height: 1rem;
+    color:#4c4948;
+}
+.swiper-slide .title img{
+    width: 1.39rem;
+    height:0.426rem;
+    line-height: 1rem;
+    vertical-align: middle;
+    margin-top:0.287rem;
+}
+.swiper-slide .main{
+    height: 90%;
+    padding:0.157rem 0.528rem 0.29rem 0.528rem;
+    border-top:0.0185rem solid #e8e8e8;
+    border-bottom:0.0185rem solid #e8e8e8;
+    overflow: hidden;
+}
+.swiper-slide .main h1{
+    color:#666;
+    font-size:0.45rem;
+}
+.swiper-slide .main h2{
+    color:#999;
+    text-indent: 0.2rem;
+    margin-bottom:0.185rem;
+    margin-top:0.2rem;
+    font-size:0.4rem;
+}
+.swiper-slide .main ul{
+    margin-top:0.185rem;
+}
+.swiper-slide .main ul li{
+    padding-left: 0.4rem;
+    color:#b6b6b6;
+    font-size:0.353rem;
+    line-height: 0.51rem;
+}
+.swiper-slide .main p{
+    font-size:0.353rem;
+    line-height: 0.6rem;
+    color:#b6b6b6;
+    margin-bottom:0.0462rem;
+}
+.swiper-slide .main p img{
+    width: 100%;
+}
+/*
+ 6s 7 的适配
+*/
+@media screen and ( max-width: 375px){
+    .listPage ul.one li ul.two li{
+        margin-top:0.15rem;
+    }
+}
+/*
+    xr等大屏手机的适配
+*/
+/*@media screen and ( min-width: 376px){*/
+/*    .swiper-slide.home{*/
+/*        background-color: #f99;*/
+/*    }*/
+/*}*/
